@@ -4,13 +4,6 @@
 <web-app>
 	<display-name>JAX-RS Jersey App</display-name>
 
-	<listener>
-		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-	</listener>
-
-	<listener>
-		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
-	</listener>
 
 	<filter>
 		<filter-name>springSecurityFilterChain</filter-name>
@@ -22,6 +15,14 @@
 		<url-pattern>/services/*</url-pattern>
 	</filter-mapping>
 
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+	
 	<servlet>
 		<servlet-name>JAX-RS Jersey App</servlet-name>
 		<servlet-class>com.sun.jersey.spi.spring.container.servlet.SpringServlet</servlet-class>
